@@ -1,3 +1,4 @@
+#include "dngpch.h"
 #include "Log.h"
 
 namespace Djinn

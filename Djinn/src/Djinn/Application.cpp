@@ -1,3 +1,4 @@
+#include "dngpch.h"
 #include "Application.h"
 
 namespace Djinn {
@@ -11,6 +12,11 @@ namespace Djinn {
 
 	void Application::Run()
 	{
+		/*WindowResizeEvent e(1200, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+			Djinn_Trace(e);
+		if (e.IsInCategory(EventCategoryInput))
+			Djinn_Trace(e);*/
 		while (true);
 	}
 }

@@ -8,6 +8,7 @@ workspace "Djinn"
 		"Dist"
 	}
 
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Djinn"
@@ -18,6 +19,9 @@ project "Djinn"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "dngpch.h"
+	pchsource "Djinn/src/dngpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -26,6 +30,7 @@ project "Djinn"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

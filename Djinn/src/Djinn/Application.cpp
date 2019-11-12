@@ -4,6 +4,7 @@
 namespace Djinn {
 	Djinn::Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Djinn::Application::~Application()
@@ -12,11 +13,9 @@ namespace Djinn {
 
 	void Application::Run()
 	{
-		/*WindowResizeEvent e(1200, 720);
-		if (e.IsInCategory(EventCategoryApplication))
-			Djinn_Trace(e);
-		if (e.IsInCategory(EventCategoryInput))
-			Djinn_Trace(e);*/
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }

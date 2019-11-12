@@ -1,0 +1,3 @@
+[submodule "Djinn/vendor/spdlog"]
+	path = Djinn/vendor/spdlog
+	url = https://github.com/gabime/spdlog

@@ -24,7 +24,7 @@ namespace Djinn
 #define Djinn_Core_Warn(...)	::Djinn::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define Djinn_Core_Info(...)	::Djinn::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define Djinn_Core_Trace(...)	::Djinn::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define Djinn_Core_Fatal(...)	::Djinn::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define Djinn_Core_Fatal(...)	::Djinn::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 
 // Client logging macros
@@ -32,7 +32,7 @@ namespace Djinn
 #define Djinn_Warn(...)		::Djinn::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define Djinn_Info(...)		::Djinn::Log::GetClientLogger()->info(__VA_ARGS__)
 #define Djinn_Trace(...)	::Djinn::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define Djinn_Fatal(...)	::Djinn::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define Djinn_Fatal(...)	::Djinn::Log::GetClientLogger()->critical(__VA_ARGS__)
 
 // if dist build
-#define Djinn_Core_Info
+// #define Djinn_Core_Info

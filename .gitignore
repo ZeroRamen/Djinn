@@ -1,7 +1,7 @@
 # Directories I want to ignore
 .vs/
-bin/
-bin-int/
+/bin/
+/bin-int/
 
 # Files I want to ignore
 *.user

@@ -1,3 +1,6 @@
 [submodule "Djinn/vendor/spdlog"]
 	path = Djinn/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Djinn/vendor/GLFW"]
+	path = Djinn/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

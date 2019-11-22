@@ -14,8 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Djinn/vendor/GLFW/include"
+IncludeDir["Glad"] = "Djinn/vendor/Glad/include"
+IncludeDir["ImGui"] = "Djinn/vendor/imgui"
 
 include "Djinn/vendor/GLFW"
+include "Djinn/vendor/Glad"
+include "Djinn/vendor/imgui"
 
 project "Djinn"
 	location "Djinn"
@@ -38,12 +42,16 @@ project "Djinn"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -55,7 +63,8 @@ project "Djinn"
 		defines
 		{
 			"DJINN_PLATFORM_WINDOWS",
-			"DJINN_BUILD_DLL"
+			"DJINN_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

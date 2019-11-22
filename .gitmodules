@@ -4,3 +4,6 @@
 [submodule "Djinn/vendor/GLFW"]
 	path = Djinn/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Djinn/vendor/imgui"]
+	path = Djinn/vendor/imgui
+	url = https://github.com/TheCherno/imgui

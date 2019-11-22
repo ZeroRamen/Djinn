@@ -9,12 +9,10 @@ public:
 
 	void OnUpdate() override
 	{
-		Djinn_Info("ExampleLayer::Update");
 	}
 
 	void OnEvent(Djinn::Event& event) override
 	{
-		Djinn_Trace("{0}", event);
 	}
 };
 
@@ -24,6 +22,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Djinn::ImGuiLayer());
 	}
 	~Sandbox()
 	{

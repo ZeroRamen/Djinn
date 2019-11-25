@@ -9,6 +9,9 @@ public:
 
 	void OnUpdate() override
 	{
+		if (Djinn::Input::IsKeyPressed(DJINN_KEY_TAB))
+			Djinn_Trace("Tab Key Pressed!");
+
 	}
 
 	void OnEvent(Djinn::Event& event) override

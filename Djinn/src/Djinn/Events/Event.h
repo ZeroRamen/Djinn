@@ -74,5 +74,3 @@ namespace Djinn
 		return os << e.ToString();
 	}
 }
-
-

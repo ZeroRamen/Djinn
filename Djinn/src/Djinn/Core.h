@@ -18,4 +18,9 @@
 	#define DJINN_CORE_ASSERT(x, ...)
 #endif
 
+// bit flag macro
+// Enables bitwise operators (70-80% faster than comparison operators)
 #define BIT(x) (1 << x)
+
+// Macro to bind functions to events
+#define DJINN_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

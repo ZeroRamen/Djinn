@@ -1,0 +1,15 @@
+#pragma once
+
+// Stolen from glfw3.h
+#define DJINN_MOUSE_BUTTON_1         0
+#define DJINN_MOUSE_BUTTON_2         1
+#define DJINN_MOUSE_BUTTON_3         2
+#define DJINN_MOUSE_BUTTON_4         3
+#define DJINN_MOUSE_BUTTON_5         4
+#define DJINN_MOUSE_BUTTON_6         5
+#define DJINN_MOUSE_BUTTON_7         6
+#define DJINN_MOUSE_BUTTON_8         7
+#define DJINN_MOUSE_BUTTON_LAST      DJINN_MOUSE_BUTTON_8
+#define DJINN_MOUSE_BUTTON_LEFT      DJINN_MOUSE_BUTTON_1
+#define DJINN_MOUSE_BUTTON_RIGHT     DJINN_MOUSE_BUTTON_2
+#define DJINN_MOUSE_BUTTON_MIDDLE    DJINN_MOUSE_BUTTON_3

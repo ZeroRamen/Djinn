@@ -160,12 +160,16 @@
     <ClInclude Include="src\Djinn\Events\Event.h" />
     <ClInclude Include="src\Djinn\Events\KeyEvent.h" />
     <ClInclude Include="src\Djinn\Events\MouseEvent.h" />
+    <ClInclude Include="src\Djinn\Input.h" />
+    <ClInclude Include="src\Djinn\Keycodes.h" />
     <ClInclude Include="src\Djinn\Layer.h" />
     <ClInclude Include="src\Djinn\LayerStack.h" />
     <ClInclude Include="src\Djinn\Log.h" />
+    <ClInclude Include="src\Djinn\MouseButtonCodes.h" />
     <ClInclude Include="src\Djinn\Window.h" />
     <ClInclude Include="src\Djinn\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\dngpch.h" />
   </ItemGroup>
@@ -177,6 +181,7 @@
     <ClCompile Include="src\Djinn\Log.cpp" />
     <ClCompile Include="src\Djinn\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\dngpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

@@ -43,6 +43,7 @@ namespace Djinn
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClosed));
 
+		Djinn_Core_Trace("{0}", e);
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
 			(*--it)->OnEvent(e);
@@ -54,7 +55,8 @@ namespace Djinn
 	{
 		while (m_Running)
 		{
-			glClear(GL_COLOR_BUFFER_BIT);
+			// glClear(GL_COLOR_BUFFER_BIT);
+			
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
 			m_Window->OnUpdate();

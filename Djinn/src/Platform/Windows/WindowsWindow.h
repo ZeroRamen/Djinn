@@ -23,25 +23,29 @@ namespace Djinn
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
+		LRESULT CALLBACK DjinnProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-		inline virtual void* GetNativeWindow() const {return m_Window; }
+		inline virtual void* GetNativeWindow() const { return m_Window; }
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
 
-		GLFWwindow* m_Window;
+		//GLFWwindow* m_Window;
 
 		struct WindowData
 		{
 			std::string Title;
-			unsigned int Width, Height;
-			bool VSync;
+			unsigned int Width = 0, Height = 0;
+			bool VSync = false;
 
 			EventCallbackFn EventCallback;
 		};
 
-		WindowData m_Data;
+		WindowData	m_Data;				// Storage for window values & event callback
+		HWND		m_Window;			// Handler to window
+		HINSTANCE	m_Instance;			// Handle to application instance
 	};
+	extern WindowsWindow* pWindow;
 }
 
 

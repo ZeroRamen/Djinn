@@ -9,8 +9,6 @@ public:
 
 	void OnUpdate() override
 	{
-		if (Djinn::Input::IsKeyPressed(DJINN_KEY_TAB))
-			Djinn_Trace("Tab Key Pressed!");
 
 	}
 
@@ -25,7 +23,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Djinn::ImGuiLayer());
+		// PushOverlay(new Djinn::ImGuiLayer());
 	}
 	~Sandbox()
 	{
